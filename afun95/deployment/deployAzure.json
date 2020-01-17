@@ -249,7 +249,7 @@
                             "runAfter": {},
                             "type": "ApiConnection",
                             "inputs": {
-                                "body": "Bonjour @{concat('Here is the message: ', triggerOutputs()['queries']['salutation'])}",
+                                "body": "Hello @{concat('Here is the message: ', triggerOutputs()['queries']['greeting'])}",
                                 "host": {
                                     "connection": {
                                         "name": "@parameters('$connections')['onedrive']['connectionId']"
@@ -345,7 +345,7 @@
                         "SimpleHttpTrigger": {
                             "inputs": {
                                 "body": {
-                                    "name": "@{triggerOutputs()['queries']['salutation']}"
+                                    "name": "@{triggerOutputs()['queries']['greeting']}"
                                 },
                                 "function": {
                                     "id": "[variables('finalAzFuncHttpTriggerID')]"
